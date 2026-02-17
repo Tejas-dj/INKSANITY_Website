@@ -21,11 +21,64 @@
     color: var(--foreground);
     /* Default to Courier Prime for that Typewriter look */
     font-family: var(--font-courier), monospace; 
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* Paper Texture Overlay 
+    - Uses an SVG noise filter to create grain.
+    - pointer-events-none ensures you can click buttons underneath it.
+    - mix-blend-mode: overlay blends it with the #E8D1A7 background.
+  */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 50; /* Top layer, but clickable through */
+    pointer-events: none;
+    opacity: 0.08; /* Subtle grain */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    mix-blend-mode: overlay;
   }
 
   /* Force headings to use Cinzel Decorative */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-cinzel), serif;
     font-weight: 700;
+  }
+}
+
+@layer utilities {
+  /* Torn Edge Utility
+    - Creates a jagged bottom edge using clip-path.
+    - Useful for images or section dividers.
+  */
+  .torn-edge {
+    clip-path: polygon(
+      0% 0%, 
+      100% 0%, 
+      100% 100%, 
+      95% 98%, 
+      90% 100%, 
+      85% 99%, 
+      80% 100%, 
+      75% 98%, 
+      70% 100%, 
+      65% 99%, 
+      60% 100%, 
+      55% 98%, 
+      50% 100%, 
+      45% 99%, 
+      40% 100%, 
+      35% 98%, 
+      30% 100%, 
+      25% 99%, 
+      20% 100%, 
+      15% 98%, 
+      10% 100%, 
+      5% 99%, 
+      0% 100%
+    );
   }
 }
