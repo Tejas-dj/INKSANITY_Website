@@ -1,22 +1,33 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* We will add our Design System tokens here in Phase 2 */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Dark Academia / Cyberpunk Palette */
+  --background: #0a0a0a; /* Deep charcoal/black */
+  --foreground: #e5e5e5; /* Paper/Off-white */
+  
+  /* Brand Color: Deep Crimson */
+  --primary: #9f1239; 
+  
+  /* Muted Text */
+  --muted: #a3a3a3; 
+  
+  /* Glassmorphism Border */
+  --border: rgba(255, 255, 255, 0.1); 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    /* Default to Inter */
+    font-family: var(--font-inter), sans-serif; 
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Force headings to use Playfair Display */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), serif;
+    font-weight: 700;
+  }
 }
