@@ -1,44 +1,50 @@
-import Image from "next/image";
 import Link from "next/link";
-import { Member } from "@/types";
-import { Github, Instagram, Linkedin } from "lucide-react";
+import { Linkedin, Github, Instagram } from "lucide-react";
+import { Card } from "@/components/ui/Card";
+import { TeamMember } from "@/types";
 
-export function TeamCard({ member }: { member: Member }) {
+interface TeamCardProps {
+  member: TeamMember;
+}
+
+export function TeamCard({ member }: TeamCardProps) {
   return (
-    <div className="group relative flex flex-col items-center rounded-xl border border-white/10 bg-white/5 p-6 text-center transition-colors hover:border-primary/50 hover:bg-white/10">
-      <div className="relative mb-4 h-32 w-32 overflow-hidden rounded-full border-2 border-white/10 group-hover:border-primary">
-        <Image
-          src={member.image}
-          alt={member.name}
-          fill
-          className="object-cover"
-        />
+    <Card className="flex flex-col items-center p-6 text-center bg-[#FDF6E3]">
+      <div className="mb-4 h-32 w-32 overflow-hidden rounded-full border-2 border-[#442D1C] bg-[#E8D1A7] shadow-[2px_2px_0px_#442D1C]">
+        {member.image ? (
+          <img 
+            src={member.image} 
+            alt={member.name} 
+            className="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center text-4xl font-serif text-[#442D1C]/20">
+            {member.name[0]}
+          </div>
+        )}
       </div>
       
-      <h3 className="text-xl font-bold text-white">{member.name}</h3>
-      <p className="mb-4 text-sm font-medium text-primary">{member.role}</p>
+      <h3 className="mb-1 text-xl font-bold text-[#442D1C] font-serif">{member.name}</h3>
+      <p className="mb-2 text-sm font-medium text-[#743014] font-mono uppercase tracking-wider">{member.role}</p>
+      <p className="mb-6 text-sm text-[#442D1C]/70 italic">"{member.bio}"</p>
       
-      <p className="mb-6 line-clamp-3 text-sm text-white/60">
-        {member.bio}
-      </p>
-
-      <div className="mt-auto flex gap-4 text-white/40">
+      <div className="mt-auto flex gap-4">
         {member.socials.linkedin && (
-          <Link href={member.socials.linkedin} className="hover:text-white transition-colors">
-            <Linkedin size={18} />
-          </Link>
-        )}
-        {member.socials.instagram && (
-          <Link href={member.socials.instagram} className="hover:text-white transition-colors">
-            <Instagram size={18} />
+          <Link href={member.socials.linkedin} className="text-[#442D1C]/60 hover:text-[#743014] transition-colors">
+            <Linkedin size={20} />
           </Link>
         )}
         {member.socials.github && (
-          <Link href={member.socials.github} className="hover:text-white transition-colors">
-            <Github size={18} />
+          <Link href={member.socials.github} className="text-[#442D1C]/60 hover:text-[#743014] transition-colors">
+            <Github size={20} />
+          </Link>
+        )}
+        {member.socials.instagram && (
+          <Link href={member.socials.instagram} className="text-[#442D1C]/60 hover:text-[#743014] transition-colors">
+            <Instagram size={20} />
           </Link>
         )}
       </div>
-    </div>
+    </Card>
   );
 }

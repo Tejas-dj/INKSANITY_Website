@@ -1,41 +1,38 @@
 [
-    {
+  {
     "id": "evt-001",
     "title": "The Great Policy Debate",
     "date": "2024-11-15",
     "category": "debate",
     "status": "upcoming",
-    "image": "/images/events/policy-debate.jpg",
+    "image": "/images/events/evt-001.jpg",
     "description": "An open floor debate on upcoming urban policy changes."
-    },
-
-    {
+  },
+  {
     "id": "evt-002",
     "title": "Creative Writing Workshop",
     "date": "2024-10-20",
     "category": "workshop",
     "status": "upcoming",
-    "image": "/images/events/writing-workshop.jpg",
+    "image": "/images/events/evt-002.jpg",
     "description": "Master the art of storytelling with guest author Sarah Jenkins."
-    },
-
-    {
+  },
+  {
     "id": "evt-003",
     "title": "Fall Literary Festival",
     "date": "2024-09-01",
     "category": "literary",
     "status": "past",
-    "image": "/images/events/fall-fest.jpg",
+    "image": "/images/events/evt-003.jpg",
     "description": "Our annual celebration of local poetry and prose."
-    },
-    
-    {
+  },
+  {
     "id": "evt-004",
     "title": "Tech & Society Symposium",
     "date": "2024-08-15",
     "category": "debate",
     "status": "past",
-    "image": "/images/events/tech-symposium.jpg",
+    "image": "/images/events/evt-004.jpg",
     "description": "Debating the ethics of AI in modern education."
-    }
+  }
 ]

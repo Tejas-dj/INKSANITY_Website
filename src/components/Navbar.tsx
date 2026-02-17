@@ -18,10 +18,10 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b-4 border-double border-[#9D9167] bg-[#E8D1A7] shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold tracking-tighter text-white">
+        <Link href="/" className="text-xl font-bold tracking-tighter text-[#442D1C] font-serif">
           INKSANITY
         </Link>
 
@@ -31,7 +31,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-white/70 transition-colors hover:text-primary"
+              className="text-sm font-medium font-mono text-[#442D1C] uppercase tracking-widest transition-colors hover:text-[#743014] hover:underline hover:decoration-wavy"
             >
               {link.name}
             </Link>
@@ -42,7 +42,7 @@ export default function Navbar() {
         {/* Mobile Toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="text-white/70 hover:text-white md:hidden"
+          className="text-[#442D1C] hover:text-[#743014] md:hidden"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -55,7 +55,7 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden border-b border-white/10 bg-black md:hidden"
+            className="overflow-hidden border-b-4 border-double border-[#9D9167] bg-[#E8D1A7] md:hidden"
           >
             <div className="flex flex-col space-y-4 p-6">
               {navLinks.map((link) => (
@@ -63,7 +63,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="text-lg font-medium text-white/70 hover:text-white"
+                  className="text-lg font-medium font-mono text-[#442D1C] uppercase tracking-widest hover:text-[#743014] hover:underline hover:decoration-wavy"
                 >
                   {link.name}
                 </Link>

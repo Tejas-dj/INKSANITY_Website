@@ -1,25 +1,27 @@
-import Link from "next/link";
-import { NewsItem } from "@/types";
-import { ArrowUpRight } from "lucide-react";
+import { Card } from "@/components/ui/Card";
+import { NewsletterItem } from "@/types";
+import { Button } from "@/components/ui/Button";
 
-export function NewsCard({ item }: { item: NewsItem }) {
+interface NewsCardProps {
+  item: NewsletterItem;
+}
+
+export function NewsCard({ item }: NewsCardProps) {
   return (
-    <div className="flex flex-col justify-between rounded-lg border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/10">
-      <div>
-        <div className="mb-4 flex items-center justify-between">
-          <span className="text-xs font-medium text-primary">{item.date}</span>
-          <ArrowUpRight size={16} className="text-white/40" />
-        </div>
-        <h3 className="mb-2 text-lg font-bold text-white">{item.headline}</h3>
-        <p className="text-sm text-white/60">{item.snippet}</p>
+    <Card className="p-6 bg-[#FDF6E3]">
+      <div className="mb-4 flex items-center justify-between border-b border-[#442D1C]/20 pb-4">
+        <span className="border border-[#743014] px-3 py-1 text-xs font-bold text-[#743014] uppercase tracking-wider">
+          {item.month}
+        </span>
+        <span className="text-xs font-mono text-[#442D1C]/60">Vol. {item.volume}</span>
       </div>
-      
-      <Link 
-        href={item.link} 
-        className="mt-4 text-sm font-medium text-white underline decoration-white/30 underline-offset-4 hover:decoration-primary"
-      >
-        Read more
-      </Link>
-    </div>
+      <h3 className="mb-2 text-xl font-bold text-[#442D1C] font-serif">{item.title}</h3>
+      <p className="mb-6 text-sm text-[#442D1C]/80 font-mono leading-relaxed line-clamp-3">
+        {item.highlights[0]}
+      </p>
+      <Button variant="outline" className="w-full text-xs uppercase tracking-widest">
+        Read Issue
+      </Button>
+    </Card>
   );
 }
