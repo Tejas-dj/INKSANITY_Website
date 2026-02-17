@@ -2,8 +2,8 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
 content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",      // Scans root app folder
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",      // Scans src folder (components & lib)
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
 ],
 theme: {
     extend: {
@@ -11,12 +11,14 @@ theme: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: "var(--primary)",
+        secondary: "var(--secondary)",
         muted: "var(--muted)",
-        border: "var(--border)",
+        black: "var(--black)",
+        white: "var(--white)",
     },
     fontFamily: {
-        serif: ["var(--font-playfair)", "serif"],
-        sans: ["var(--font-inter)", "sans-serif"],
+        serif: ["var(--font-cinzel)", "serif"],
+        mono: ["var(--font-courier)", "monospace"],
     },
     },
 },

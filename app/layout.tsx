@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Cinzel_Decorative, Courier_Prime } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const cinzel = Cinzel_Decorative({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  weight: ["400", "700", "900"],
+  variable: "--font-cinzel",
   display: "swap",
 });
 
-const inter = Inter({
+const courier = Courier_Prime({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "700"],
+  variable: "--font-courier",
   display: "swap",
 });
 
@@ -26,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} antialiased`}>
+      <body className={`${cinzel.variable} ${courier.variable} antialiased`}>
         {children}
       </body>
     </html>

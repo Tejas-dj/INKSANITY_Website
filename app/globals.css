@@ -3,31 +3,29 @@
 @tailwind utilities;
 
 :root {
-  /* Dark Academia / Cyberpunk Palette */
-  --background: #0a0a0a; /* Deep charcoal/black */
-  --foreground: #e5e5e5; /* Paper/Off-white */
+  /* Vintage Scrapbook / Dark Academia Palette */
+  --background: #E8D1A7; /* Golden Batter (Paper) */
+  --foreground: #442D1C; /* Cowhide Cocoa (Text) */
   
-  /* Brand Color: Deep Crimson */
-  --primary: #9f1239; 
+  --primary: #743014;    /* Spiced Wine (Buttons) */
+  --secondary: #9D9167;  /* Olive Harvest (Borders) */
+  --muted: #84592B;      /* Toasted Caramel (Cards) */
   
-  /* Muted Text */
-  --muted: #a3a3a3; 
-  
-  /* Glassmorphism Border */
-  --border: rgba(255, 255, 255, 0.1); 
+  --black: #000000;      /* Pure Black (Ink) */
+  --white: #ffffff;      /* Pure White (Contrast) */
 }
 
 @layer base {
   body {
     background-color: var(--background);
     color: var(--foreground);
-    /* Default to Inter */
-    font-family: var(--font-inter), sans-serif; 
+    /* Default to Courier Prime for that Typewriter look */
+    font-family: var(--font-courier), monospace; 
   }
 
-  /* Force headings to use Playfair Display */
+  /* Force headings to use Cinzel Decorative */
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-playfair), serif;
+    font-family: var(--font-cinzel), serif;
     font-weight: 700;
   }
 }
