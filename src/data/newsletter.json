@@ -1,0 +1,27 @@
+[
+    {
+    "id": "news-001",
+    "headline": "Club Membership Hits Record High",
+    "snippet": "We are thrilled to announce over 500 active members this semester.",
+    "date": "2024-10-05",
+    "link": "https://newsletter.example.com/record-high"
+    },
+
+
+    {
+    "id": "news-002",
+    "headline": "Recap: The Fall Debate Tournament",
+    "snippet": "Highlights and winners from last week's intense competition.",
+    "date": "2024-09-28",
+    "link": "https://newsletter.example.com/fall-debate-recap"
+    },
+
+
+    {
+    "id": "news-003",
+    "headline": "New Partnership with City Library",
+    "snippet": "Exciting new venue opportunities for our literary workshops.",
+    "date": "2024-09-10",
+    "link": "https://newsletter.example.com/library-partnership"
+    }
+]
