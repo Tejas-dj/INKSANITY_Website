@@ -28,6 +28,7 @@ export default async function Home() {
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-white/60 md:text-xl">
               The Literary & Debate Club of BMSCE. Where words collide, ideas ignite, and voices matter.
+              ignore the placeholder text and the dqta entered i needed placeholder so i used ai to write random ass events etc
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link href="/join">

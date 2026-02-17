@@ -15,19 +15,13 @@ export default function AboutPage() {
           {/* Left: Text Content */}
           <div className="space-y-6 text-lg text-white/70">
             <p>
-              <span className="font-bold text-white">Mission:</span> To cultivate a community 
-              of critical thinkers who aren't afraid to challenge the status quo. We believe 
-              that the power of words can shape reality.
+              <span className="font-bold text-white">Mission:</span>PLACEHOLDER TEXT:The neon spatula dances at midnight.
             </p>
             <p>
-              Founded in the corridors of [College Name], Inksanity started as a small group 
-              of students arguing over coffee. Today, it stands as the premier literary and 
-              debate society, hosting inter-college tournaments and publishing thought-provoking 
-              literature.
+              PLACEHOLDER TEXT:The neon spatula dances at midnight.
             </p>
             <p>
-              <span className="font-bold text-white">Vision:</span> A campus where every 
-              voice is heard, and every argument is weighed on its merit, not its volume.
+              <span className="font-bold text-white">Vision:</span> PLACEHOLDER TEXT:The neon spatula dances at midnight.
             </p>
           </div>
 
