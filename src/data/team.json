@@ -4,7 +4,7 @@
     "name": "Alex Rivera",
     "role": "President",
     "bio": "Leading with vision and a passion for public discourse.",
-    "image": "/images/team/alex.jpg",
+    "image": "",
     "socials": 
     {
         "linkedin": "https://linkedin.com/in/alexrivera",
@@ -12,13 +12,13 @@
     }
     },
 
-    
+
     {
     "id": "mem-002",
     "name": "Jordan Lee",
     "role": "Vice President",
     "bio": "Orchestrating events and ensuring smooth operations.",
-    "image": "/images/team/jordan.jpg",
+    "image": "",
     "socials":
     {
     "linkedin": "https://linkedin.com/in/jordanlee"
@@ -31,7 +31,7 @@
     "name": "Casey Chen",
     "role": "Tech Lead",
     "bio": "Building the digital infrastructure for our community.",
-    "image": "/images/team/casey.jpg",
+    "image": "",
     "socials": 
     {
         "github": "https://github.com/caseychen",

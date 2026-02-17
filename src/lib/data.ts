@@ -20,7 +20,7 @@ export function getAllMembers(): Member[] {
     return members;
 }
 
-export function getLatestNews(): NewsItem[] {
+export function getLatestNewsletter(): NewsItem[] {
   // Returns news sorted by date (newest first) if not already sorted in JSON
     return news.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }

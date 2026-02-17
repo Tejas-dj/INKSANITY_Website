@@ -4,12 +4,12 @@ import Footer from "@/components/Footer";
 import { EventCard } from "@/components/EventCard";
 import { NewsCard } from "@/components/NewsCard";
 import { Button } from "@/components/ui/Button";
-import { getUpcomingEvents, getLatestNews } from "@/lib/data"; // Assuming this exists
+import { getUpcomingEvents, getLatestNewsletter } from "@/lib/data"; 
 
 export default async function Home() {
   // Fetch data
   const events = await getUpcomingEvents();
-  const latestNews = await getLatestNews(); // Assuming you have this helper, or pass a dummy one
+  const latestNews = await getLatestNewsletter(); 
   const featuredEvents = events.slice(0, 3);
 
   return (
@@ -27,11 +27,11 @@ export default async function Home() {
               INKSANITY
             </h1>
             <p className="mx-auto mb-10 max-w-2xl text-lg text-white/60 md:text-xl">
-              The Literary & Debate Club of [College Name]. Where words collide, ideas ignite, and voices matter.
+              The Literary & Debate Club of BMSCE. Where words collide, ideas ignite, and voices matter.
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link href="/join">
-                <Button variant="primary" className="h-12 px-8 text-base">Join the Club</Button>
+                <Button variant="primary" className="h-12 px-8 text-base">Explore the Club</Button>
               </Link>
               <Link href="/events">
                 <Button variant="outline" className="h-12 px-8 text-base">View Events</Button>
@@ -66,13 +66,13 @@ export default async function Home() {
                 <div>
                   <h2 className="mb-4 text-3xl font-bold text-white">The Inkwell</h2>
                   <p className="mb-8 text-white/60">
-                    Stay updated with our weekly digest of literary snippets, debate topics, and club gossip.
+                    Stay updated with our Monthly digest of literary snippets, debate topics, and club gossip.
                   </p>
                   <Button variant="outline">Subscribe Now</Button>
                 </div>
                 <div className="grid gap-4">
                    {/* Mapping just one or two latest news items */}
-                   <NewsCard item={latestNews[0]} />
+                  <NewsCard item={latestNews[0]} />
                 </div>
               </div>
             </div>
